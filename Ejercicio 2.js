@@ -1,17 +1,17 @@
-let n = 0, s1 = 0, s2 = 0;
+// Ejercicio 2
+let datos = parseInt(prompt("datos a ingresar:"));
+var calificaciones = new Array(datos);
 
-n = prompt("Limite");
-
-for(let i = 1; i<=n; i+=1){
-    s1 = s1 + i;
+for(var i = 0; i < calificaciones.length; i++){
+        let calificacion = parseFloat(prompt("Calificaión:"));
+        calificaciones[i] = calificacion;       
+        console.log("dato"+i+":",calificaciones[i]);
 }
-s2=(n*((n+1)/2));
+var promedio = 0;
 
-console.log("S1 = ",s1);
-console.log("S2 = ",s2);
-
-if(s1==s2){
-    console.log("iguales");
-}else{
-    console.log("no iguales");
+for(i = 0; i <= calificaciones.length; i++){
+    if(calificaciones[i] >= 6){
+        promedio++;
+    }
 }
+console.log(promedio,"datos son mayor al prmedio")

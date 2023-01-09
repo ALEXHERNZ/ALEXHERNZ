@@ -1,9 +1,16 @@
-let n = 0;
+//Ejercicio 1
+let limitador = parseInt(prompt("ingresa el numero de numeros que quieres ingresar"));
+var numeros = new Array(limitador);
+for(var i = 0; i < numeros.length; i++){
+    let numero = parseInt(prompt("Dame numero")); 
+    numeros[i] = numero;
+}
 
-n = prompt("Dame un limite");
-
-for(let i=0; i<=n; i+=1){
-    if(i%3==0 || i%7==0){}else{
-        console.log(i);
+let x = parseInt(prompt("Ingresa valor para comparar"));
+var mayor = 0;
+for(i = 0; i < numeros.length; i++){
+    if(numeros[i] > x){
+        mayor++;
     }
 }
+console.log("De tu lista,", mayor,"valores son mayor a ",x);
